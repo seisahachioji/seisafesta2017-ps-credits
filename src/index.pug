@@ -1,0 +1,124 @@
+-
+  var credits = [
+    {
+      title: 'SnakeGame',
+      descriptionHtml: 'へびが餌を食べると大きくなるゲームです。<br/>昔からあるSnakeGameを自分風に作ってみました。<br/>自分が難しいと思う程度の難易度にしたら他の人がほとんど進めなくなってしまいました',
+      screenshot: 'assets/sudou_screenshot.png',
+      team: {
+        name: 'sudou',
+        members: [
+          {
+            grade: '2年',
+            name: '須藤 ゆうや',
+            job: 'デザイナー兼プログラマー',
+            avatar: 'assets/sudou.png',
+            commentHtml: '楽しいよ。'
+          }
+        ]
+      }
+    },
+    {
+      title: '未定 (あとで決める)',
+      descriptionHtml: 'カオスなマリオ。ボンドが出て来る。',
+      screenshot: 'assets/bond_screenshot.png',
+      team: {
+        name: 'ボンドと愉快な仲間たち',
+        members: [
+          {
+            grade: '1年',
+            name: '音依',
+            job: '開発兼雑務',
+            avatar: 'assets/bond_01.jpg',
+            commentHtml: '醤油ラーメンおいしい'
+          },
+          {
+            grade: '1年',
+            name: 'バカボンド',
+            job: 'グラフィッカー兼ボンド担当',
+            avatar: 'assets/bond_02.jpg',
+            commentHtml: '塩ラーメンおいしい'
+          },
+          {
+            grade: '1年',
+            name: 'インスタントER',
+            job: 'グラフィッカー兼おふざけ担当',
+            avatar: 'assets/bond_03.jpg',
+            commentHtml: '醤油ラーメン最高'
+          }
+        ]
+      }
+    },
+    {
+      title: '未定 (あとで決める)',
+      descriptionHtml: 'アクションエディターを使っています。',
+      screenshot: 'assets/actioneditor_screenshot.png',
+      team: {
+        name: 'アクションエディター',
+        members: [
+          {
+            grade: '専攻科',
+            name: '松本まさし',
+            job: 'ぜんぶ',
+            avatar: 'assets/masashi.jpg',
+            commentHtml: 'アクションエディターすごいですねこれ'
+          }
+        ]
+      }
+    },
+    {
+      title: '頭悪そうな冒険',
+      descriptionHtml: 'たのちい',
+      screenshot: 'assets/banana_screenshot.png',
+      team: {
+        name: 'バーサーカーソウル',
+        members: [
+          {
+            grade: '3年',
+            name: '秦の。',
+            job: 'プログラマー',
+            avatar: 'assets/banana_hata.jpg',
+            commentHtml: '初のゲーム作品です'
+          },
+            {
+              grade: '3年',
+              name: '塩辛らーめん',
+              job: 'おえかき',
+              avatar: 'assets/banana_ramen.jpg',
+              commentHtml: 'ぱせり'
+            },
+            {
+              grade: '3年',
+              name: 'アズレン廃人',
+              job: '企画',
+              avatar: 'assets/banana_azulane.jpg',
+              commentHtml: 'アズレンから逃げるな'
+            }
+        ]
+      }
+    }
+  ];
+
+doctype html
+html
+  head
+    link(rel="stylesheet" href="bundle.css")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css")
+  body.A4.landscape
+    each credit in credits
+      section.sheet.padding-10mm
+        h1.title= credit.title
+        h2.team-name
+          span= 'チーム'
+          span= credit.team.name
+        div.description
+          img.screenshot(src=credit.screenshot)
+          span!= credit.descriptionHtml
+        div.members
+          each member in credit.team.members
+            div.member
+              div.member-header
+                img.member-avatar(src=member.avatar)
+                h1.member-name= member.grade + " " + member.name
+                h2.member-job= member.job
+              div.member-comment!= member.commentHtml
+        div.footer= 'プログラミングゼミ 生徒作品'

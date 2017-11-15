@@ -1,0 +1,24 @@
+{
+  "name": "seisafesta2017-ps-credits",
+  "version": "0.0.1-SNAPSHOT",
+  "private": true,
+  "dependencies": {
+    "paper-css": "^0.3.0",
+    "sanitize.css": "^5.0.0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.0",
+    "postcss-cli": "^4.1.1",
+    "postcss-cssnext": "^3.0.2",
+    "postcss-import": "^11.0.0",
+    "pug-cli": "^1.0.0-alpha6"
+  },
+  "scripts": {
+    "build": "npm run build:html && npm run build:css && npm run build:assets && npm run build:pdf",
+    "build:html": "pug src/index.pug --out dist/",
+    "build:css": "postcss src/index.css --output dist/bundle.css --config postcss.config.js",
+    "build:assets": "rsync -a --verbose assets/ dist/assets/",
+    "server": "live-server dist/",
+    "clean": "rm -rf dist/"
+  }
+}
