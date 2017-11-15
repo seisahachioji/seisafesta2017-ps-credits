@@ -14,7 +14,7 @@
     "pug-cli": "^1.0.0-alpha6"
   },
   "scripts": {
-    "build": "npm run build:html && npm run build:css && npm run build:assets && npm run build:pdf",
+    "build": "npm run build:html && npm run build:css && npm run build:assets",
     "build:html": "pug src/index.pug --out dist/",
     "build:css": "postcss src/index.css --output dist/bundle.css --config postcss.config.js",
     "build:assets": "rsync -a --verbose assets/ dist/assets/",
