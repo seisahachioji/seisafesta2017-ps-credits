@@ -21,6 +21,6 @@
     "build:css": "postcss src/index.css --output dist/bundle.css --config postcss.config.js",
     "build:assets": "cpx --verbose --update --include-empty-dirs 'assets/**' dist/assets/",
     "server": "live-server dist/",
-    "clean": "rm -rf dist/"
+    "clean": "rimraf dist/"
   }
 }
