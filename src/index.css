@@ -22,6 +22,7 @@
 
   & h1,
   & h2,
+  & h3,
   & div,
   & span {
     margin: 0;
@@ -32,6 +33,7 @@
   & .title {
     font-size: calc(var(--font-sizing-rhythm) * 3);
     line-height: 1;
+    font-weight: bold;
   }
   & .team-name {
     font-size: calc(var(--font-sizing-rhythm) * 1.3);
@@ -61,6 +63,19 @@
       clear: both;
     }
   }
+
+  & .teacher {
+    margin-top: 2em;
+    & .teacher-caption {
+      font-weight: bold;
+      font-size: calc(var(--font-sizing-rhythm) * 1.2);
+    }
+    & .teacher-comment {
+      margin-top: .75em;
+      font-size: calc(var(--font-sizing-rhythm) * .95);
+    }
+  }
+
   & .members {
     margin-top: auto;
 

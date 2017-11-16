@@ -15,7 +15,8 @@
             commentHtml: '楽しいよ。'
           }
         ]
-      }
+      },
+      feedbackHtml: 'フレームワーク等を利用せず、JavaでSwingを用い開発されてます。<br/>難しいゲームながら、開発した須藤くんはなんと40点！なお、僕は5点でした。'
     },
     {
       title: '未定 (あとで決める)',
@@ -46,7 +47,8 @@
             commentHtml: '醤油ラーメン最高'
           }
         ]
-      }
+      },
+      feedbackHtml: 'アーティスティックなグラフィックが見どころです。毎週仲良く楽しそうに開発しているのが印象的でした！'
     },
     {
       title: '未定 (あとで決める)',
@@ -63,7 +65,8 @@
             commentHtml: 'アクションエディターすごいですねこれ'
           }
         ]
-      }
+      },
+      feedbackHtml: 'アーティスティックなグラフィックが見どころです。毎週仲良く楽しそうに開発しているのが印象的でした！'
     },
     {
       title: '頭悪そうなアクション',
@@ -94,7 +97,8 @@
               commentHtml: 'アズレンから逃げるな'
             }
         ]
-      }
+      },
+      feedbackHtml: 'Twitterで最近流行りの「頭の悪い人」が主人公です。実はUnityを使って開発しているチームでは最も開発進捗が早かったです！'
     }
   ];
 
@@ -113,6 +117,9 @@ html
         div.description
           img.screenshot(src=credit.screenshot)
           span!= credit.descriptionHtml
+          div.teacher
+            h3.teacher-caption= '先生からのコメント'
+            div.teacher-comment!= credit.feedbackHtml
         div.members
           each member in credit.team.members
             div.member
