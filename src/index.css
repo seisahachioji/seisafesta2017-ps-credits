@@ -141,3 +141,9 @@
     margin-top: .75em;
   }
 }
+
+#bond {
+  & .title {
+    font-size: calc(var(--font-sizing-rhythm) * 2.6);
+  }
+}
