@@ -113,7 +113,7 @@ html
     link(rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjapanese.css")
   body.A4.landscape
     each credit in credits
-      section.sheet.padding-10mm
+      section.sheet.padding-10mm(id=credit.id)
         h1.title= credit.title
         h2.team-name
           span= 'チーム'
